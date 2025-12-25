@@ -87,9 +87,10 @@
         <div class="highlight">
             <strong>Key Points:</strong>
             <ul>
-                <li>✅ All data stored <strong>locally on your device</strong></li>
-                <li>✅ <strong>No data sent to us</strong> or third parties</li>
-                <li>✅ <strong>No analytics, tracking, or advertising</strong></li>
+                <li>✅ All IRC data stored <strong>locally on your device</strong></li>
+                <li>✅ <strong>No data sent to us</strong> (the developer)</li>
+                <li>⚠️ <strong>Free version</strong>: Uses Google AdMob (collects Advertising ID)</li>
+                <li>✅ <strong>Pro version</strong>: No ads, no tracking, no third parties</li>
                 <li>✅ Passwords <strong>encrypted using AES-256</strong></li>
             </ul>
         </div>
@@ -173,9 +174,27 @@
         </ul>
 
         <h2>5. Data Sharing</h2>
-        <p><strong>MyLirc does NOT share any user data with third parties.</strong></p>
-        <p>The only external connections made by the app are to IRC servers you explicitly configure. We do not use
-            Google Analytics, Firebase, AdMob, or any tracking/advertising services.</p>
+
+        <h3>Free Version</h3>
+        <p><strong>Google AdMob</strong> (advertising service) collects and shares data:</p>
+        <ul>
+            <li>✅ <strong>Advertising ID</strong>: Shared with ad networks for personalized ads</li>
+            <li>✅ <strong>Device Info</strong>: Model, OS version, screen size</li>
+            <li>✅ <strong>IP Address</strong>: For approximate location-based ads</li>
+            <li>✅ <strong>App Usage</strong>: For ad targeting and analytics</li>
+        </ul>
+
+        <p><strong>We (the developer) do NOT</strong>:</p>
+        <ul>
+            <li>❌ Access or store your Advertising ID</li>
+            <li>❌ Share your IRC data with anyone</li>
+            <li>❌ Sell your personal information</li>
+        </ul>
+
+        <h3>Pro Version</h3>
+        <p><strong>MyLirc Pro does NOT share any user data with third parties.</strong></p>
+        <p>The only external connections made by the app are to IRC servers you explicitly configure. No analytics, no
+            advertising, no tracking.</p>
 
         <h2>6. Data Retention and Deletion</h2>
 
@@ -189,8 +208,48 @@
         </ul>
 
         <h2>7. Third-Party Services</h2>
-        <p>MyLirc <strong>does not use</strong> any third-party services for analytics, advertising, crash reporting, or
-            cloud storage.</p>
+
+        <h3>Free Version</h3>
+        <p>The <strong>Free version</strong> uses the following third-party service:</p>
+
+        <h4 style="color: #1976D2;">Google AdMob (Advertising)</h4>
+        <ul>
+            <li><strong>Purpose</strong>: Display advertisements to support free app development</li>
+            <li><strong>Data Collected by AdMob</strong>:
+                <ul>
+                    <li>Advertising ID (for personalized ads)</li>
+                    <li>Device information (model, OS version)</li>
+                    <li>IP address (approximate location)</li>
+                    <li>App usage data (for ad targeting)</li>
+                </ul>
+            </li>
+            <li><strong>Privacy Policy</strong>: <a href="https://policies.google.com/privacy"
+                    target="_blank">https://policies.google.com/privacy</a></li>
+            <li><strong>Opt-out</strong>: Users can reset Advertising ID in Android Settings &gt; Google &gt; Ads</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>Important</strong>: AdMob may share data with advertising partners. We do not control this data
+            collection.
+        </div>
+
+        <h3>Pro Version</h3>
+        <p>The <strong>Pro version does NOT use</strong> any third-party services for:</p>
+        <ul>
+            <li>✅ <strong>No advertising</strong> (no AdMob)</li>
+            <li>✅ <strong>No analytics</strong> (no Google Analytics, Firebase)</li>
+            <li>✅ <strong>No tracking</strong> (no data collection)</li>
+            <li>✅ <strong>No cloud storage</strong> (no Google Drive, Dropbox)</li>
+        </ul>
+
+        <h3>Development Libraries (Both Versions)</h3>
+        <p>Both versions use these <strong>standard development libraries</strong> that do not collect user data:</p>
+        <ul>
+            <li>AndroidX libraries (Google's official Android libraries)</li>
+            <li>Hilt/Dagger (dependency injection framework)</li>
+            <li>Material Components (Google's UI library)</li>
+            <li>Kotlin Coroutines (concurrency framework)</li>
+        </ul>
 
         <h2>8. Permissions Explained</h2>
         <table>
@@ -247,14 +306,27 @@
         <p>If you have any questions or concerns regarding this Privacy Policy, please contact us.</p>
 
         <h2>Summary</h2>
+
+        <h3>MyLirc Free</h3>
         <div class="highlight">
-            <strong>In Plain English:</strong>
             <ul>
-                <li>✅ All your data stays on <strong>your device</strong></li>
+                <li>✅ All IRC data stays on <strong>your device</strong></li>
                 <li>✅ Passwords are <strong>encrypted</strong> with AES-256</li>
-                <li>✅ <strong>No tracking, analytics, or ads</strong></li>
+                <li>⚠️ <strong>Uses AdMob</strong> for advertising (collects Advertising ID)</li>
+                <li>✅ You can <strong>delete everything</strong> anytime</li>
+                <li>✅ We only connect to <strong>IRC servers you choose</strong></li>
+            </ul>
+        </div>
+
+        <h3>MyLirc Pro</h3>
+        <div class="highlight">
+            <ul>
+                <li>✅ All IRC data stays on <strong>your device</strong></li>
+                <li>✅ Passwords are <strong>encrypted</strong> with AES-256</li>
+                <li>✅ <strong>No ads, no tracking, no analytics</strong></li>
                 <li>✅ <strong>No data sharing</strong> with anyone</li>
                 <li>✅ You can <strong>delete everything</strong> anytime</li>
+                <li>✅ We only connect to <strong>IRC servers you choose</strong></li>
             </ul>
         </div>
 
