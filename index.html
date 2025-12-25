@@ -25,6 +25,37 @@
             padding: 40px 20px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .lang-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            background: #f5f5f5;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            padding: 5px 12px;
+            border-radius: 15px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .lang-option:hover {
+            background: #e0e0e0;
+        }
+
+        .lang-option.active {
+            background: #1976D2;
+            color: white;
+            font-weight: bold;
         }
 
         .logo-container {
@@ -100,7 +131,7 @@
         }
 
         .version-card.pro::before {
-            content: "RECOMMENDED";
+            content: attr(data-recommended);
             position: absolute;
             top: -15px;
             right: 20px;
@@ -188,100 +219,149 @@
 
 <body>
     <div class="header">
+        <div class="lang-selector">
+            <span class="lang-option active" data-lang="es" onclick="setLanguage('es')">Español</span>
+            <span class="lang-option" data-lang="en" onclick="setLanguage('en')">English</span>
+        </div>
+
         <div class="logo-container">
             <img src="logo.png" alt="MyLirc Logo" class="logo">
             <h1 class="app-title">MyLirc</h1>
         </div>
-        <p class="tagline">Modern IRC Client for Android</p>
+        <p class="tagline" data-i18n="tagline">Modern IRC Client for Android</p>
     </div>
 
     <div class="container">
-        <h2 class="section-title">Choose Your Version</h2>
+        <h2 class="section-title" data-i18n="chooseVersion">Choose Your Version</h2>
 
         <div class="versions">
             <!-- Free Version -->
             <div class="version-card">
                 <h2>MyLirc Free</h2>
-                <p class="price">Gratis</p>
+                <p class="price" data-i18n="free">Free</p>
 
                 <ul class="features-list">
-                    <li><span class="check">✓</span> Conexiones IRC básicas</li>
-                    <li><span class="check">✓</span> SSL/TLS encryption</li>
-                    <li><span class="check">✓</span> Notificaciones</li>
-                    <li><span class="check">✓</span> Interfaz Material Design</li>
-                    <li><span class="check">✓</span> Modo oscuro</li>
-                    <li><span class="check">✓</span> Multi-idioma (EN/ES)</li>
-                    <li><span class="cross">✗</span> Múltiples servidores simultáneos</li>
-                    <li><span class="cross">✗</span> Registro de chat ilimitado</li>
-                    <li><span class="cross">✗</span> Búsqueda avanzada</li>
-                    <li><span class="cross">✗</span> Temas personalizados</li>
-                    <li><span class="cross">✗</span> Sin anuncios</li>
+                    <li><span class="check">✓</span> <span data-i18n="features.basicIRC">Basic IRC connections</span>
+                    </li>
+                    <li><span class="check">✓</span> <span data-i18n="features.ssl">SSL/TLS encryption</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.notifications">Notifications</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.materialDesign">Material Design
+                            interface</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.darkMode">Dark mode</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.multiLanguage">Multi-language
+                            (EN/ES)</span></li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.multipleServers">Multiple simultaneous
+                            servers</span></li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.unlimitedLogs">Unlimited chat
+                            logging</span></li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.advancedSearch">Advanced search</span>
+                    </li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.customThemes">Custom themes</span></li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.noAds">No ads</span></li>
                 </ul>
 
-                <a href="#" class="download-btn">Descargar Free (Próximamente)</a>
+                <a href="#" class="download-btn" data-i18n="downloadFree">Download Free (Coming Soon)</a>
             </div>
 
             <!-- Pro Version -->
-            <div class="version-card pro">
+            <div class="version-card pro" data-recommended="">
                 <h2>MyLirc Pro</h2>
-                <p class="price">Pago único</p>
+                <p class="price" data-i18n="pro">One-time payment</p>
 
                 <ul class="features-list">
-                    <li><span class="check">✓</span> <strong>Todo de Free +</strong></li>
-                    <li><span class="check">✓</span> <strong>Múltiples servidores simultáneos</strong></li>
-                    <li><span class="check">✓</span> <strong>Registro de chat ilimitado</strong></li>
-                    <li><span class="check">✓</span> <strong>Búsqueda avanzada en historial</strong></li>
-                    <li><span class="check">✓</span> <strong>Temas personalizados</strong></li>
-                    <li><span class="check">✓</span> <strong>Sin anuncios</strong></li>
-                    <li><span class="check">✓</span> <strong>Soporte prioritario</strong></li>
-                    <li><span class="check">✓</span> <strong>Actualizaciones anticipadas</strong></li>
-                    <li><span class="check">✓</span> <strong>Exportar/Importar configuración</strong></li>
-                    <li><span class="check">✓</span> <strong>Comandos personalizados</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.allFree">All Free features +</strong>
+                    </li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.multipleServers">Multiple simultaneous
+                            servers</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.unlimitedLogs">Unlimited chat
+                            logging</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.advancedSearch">Advanced
+                            search</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.customThemes">Custom themes</strong>
+                    </li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.noAds">No ads</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.prioritySupport">Priority
+                            support</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.earlyUpdates">Early updates</strong>
+                    </li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.exportImport">Export/Import
+                            configuration</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.customCommands">Custom
+                            commands</strong></li>
                 </ul>
 
-                <a href="#" class="download-btn pro">Descargar Pro (Próximamente)</a>
+                <a href="#" class="download-btn pro" data-i18n="downloadPro">Download Pro (Coming Soon)</a>
             </div>
         </div>
 
-        <h2 class="section-title">Características Principales</h2>
+        <h2 class="section-title" data-i18n="mainFeatures">Main Features</h2>
 
         <div class="versions">
             <div class="version-card">
-                <h3 style="color: #1976D2;">🔒 Seguridad</h3>
-                <p>Encriptación AES-256 para contraseñas, soporte SSL/TLS, y almacenamiento seguro local.</p>
+                <h3 style="color: #1976D2;">🔒 <span data-i18n="security">Security</span></h3>
+                <p data-i18n="securityDesc">AES-256 encryption for passwords, SSL/TLS support, and secure local storage.
+                </p>
             </div>
 
             <div class="version-card">
-                <h3 style="color: #1976D2;">📱 Interfaz Moderna</h3>
-                <p>Diseño Material Design con modo oscuro, animaciones fluidas y navegación intuitiva.</p>
+                <h3 style="color: #1976D2;">📱 <span data-i18n="modernUI">Modern UI</span></h3>
+                <p data-i18n="modernUIDesc">Material Design interface with dark mode, smooth animations, and intuitive
+                    navigation.</p>
             </div>
 
             <div class="version-card">
-                <h3 style="color: #1976D2;">🔔 Notificaciones Inteligentes</h3>
-                <p>Recibe alertas de menciones, mensajes privados y palabras clave personalizadas.</p>
+                <h3 style="color: #1976D2;">🔔 <span data-i18n="smartNotifications">Smart Notifications</span></h3>
+                <p data-i18n="smartNotificationsDesc">Get alerts for mentions, private messages, and custom keyword
+                    highlights.</p>
             </div>
 
             <div class="version-card">
-                <h3 style="color: #1976D2;">⚡ Rendimiento</h3>
-                <p>Optimizado para bajo consumo de batería y uso eficiente de recursos.</p>
+                <h3 style="color: #1976D2;">⚡ <span data-i18n="performance">Performance</span></h3>
+                <p data-i18n="performanceDesc">Optimized for low battery consumption and efficient resource usage.</p>
             </div>
 
             <div class="version-card">
-                <h3 style="color: #1976D2;">🌍 Multi-idioma</h3>
-                <p>Disponible en inglés y español, con más idiomas en desarrollo.</p>
+                <h3 style="color: #1976D2;">🌍 <span data-i18n="multiLang">Multi-language</span></h3>
+                <p data-i18n="multiLangDesc">Available in English and Spanish, with more languages in development.</p>
             </div>
 
             <div class="version-card">
-                <h3 style="color: #1976D2;">🔐 Privacidad</h3>
-                <p>Sin seguimiento, sin analytics, sin compartir datos. Todo permanece en tu dispositivo.</p>
+                <h3 style="color: #1976D2;">🔐 <span data-i18n="privacy">Privacy</span></h3>
+                <p data-i18n="privacyDesc">No tracking, no analytics, no data sharing. Everything stays on your device.
+                </p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="mailto:contact@mylirc.app">Contacto</a></p>
-        <p>&copy; 2024 MyLirc. Todos los derechos reservados.</p>
+        <p><a href="privacy.html" data-i18n="privacyPolicy">Privacy Policy</a> | <a href="mailto:contact@mylirc.app"
+                data-i18n="contact">Contact</a></p>
+        <p>&copy; 2024 MyLirc. <span data-i18n="rights">All rights reserved</span>.</p>
     </footer>
+
+    <script src="lang.js"></script>
+    <script>
+        // Update recommended badge text based on language
+        function updateRecommendedBadge() {
+            const lang = localStorage.getItem('preferredLanguage') || 'es';
+            const badge = document.querySelector('.version-card.pro');
+            if (badge) {
+                badge.setAttribute('data-recommended', translations[lang].recommended);
+            }
+        }
+
+        // Override setLanguage to also update badge
+        const originalSetLanguage = setLanguage;
+        setLanguage = function (lang) {
+            originalSetLanguage(lang);
+            updateRecommendedBadge();
+        };
+
+        // Initialize badge on load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateRecommendedBadge();
+        });
+    </script>
 </body>
 
 </html>
