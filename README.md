@@ -104,7 +104,7 @@ We take your privacy seriously:
 ## 📞 Support & Contact
 
 - **Website**: [https://MyLirc.github.io/MyLirc/](https://MyLirc.github.io/MyLirc/)
-- **Email**: contact@mylirc.app
+- **Email**: c4lm40s@gmail.com
 - **Privacy Policy**: [View Policy](https://MyLirc.github.io/MyLirc/privacy.html)
 
 ---
