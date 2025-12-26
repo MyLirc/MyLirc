@@ -9,14 +9,70 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background: #f5f5f5;
             color: #333;
         }
 
+        .header {
+            background: white;
+            color: #1976D2;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .lang-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            background: #f5f5f5;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            padding: 5px 12px;
+            border-radius: 15px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .lang-option:hover {
+            background: #e0e0e0;
+        }
+
+        .lang-option.active {
+            background: #1976D2;
+            color: white;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #1976D2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
         .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content {
             background: white;
             padding: 40px;
             border-radius: 10px;
@@ -27,16 +83,19 @@
             color: #1976D2;
             border-bottom: 3px solid #1976D2;
             padding-bottom: 10px;
+            margin-top: 0;
         }
 
         h2 {
-            color: #1565C0;
+            color: #1976D2;
             margin-top: 30px;
+            margin-bottom: 15px;
         }
 
         h3 {
-            color: #1976D2;
+            color: #333;
             margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         .highlight {
@@ -46,292 +105,384 @@
             margin: 20px 0;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        ul {
+            margin: 10px 0;
+            padding-left: 30px;
         }
 
-        th,
-        td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        li {
+            margin: 8px 0;
         }
 
-        th {
+        footer {
             background: #1976D2;
             color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #1976D2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
+        footer a {
+            color: white;
             text-decoration: underline;
+        }
+
+        .es-content {
+            display: none;
+        }
+
+        .en-content {
+            display: none;
         }
     </style>
 </head>
 
 <body>
+    <div class="header">
+        <div class="lang-selector">
+            <span class="lang-option active" data-lang="es" onclick="setLanguage('es')">Español</span>
+            <span class="lang-option" data-lang="en" onclick="setLanguage('en')">English</span>
+        </div>
+        <h1>MyLirc</h1>
+    </div>
+
     <div class="container">
-        <h1>Privacy Policy for MyLirc IRC Client</h1>
-        <p><strong>Last Updated:</strong> December 25, 2024</p>
-        <p><strong>Effective Date:</strong> December 25, 2024</p>
+        <a href="index.html" class="back-link" id="backLink">← Volver al inicio</a>
 
-        <div class="highlight">
-            <strong>Key Points:</strong>
-            <ul>
-                <li>✅ All IRC data stored <strong>locally on your device</strong></li>
-                <li>✅ <strong>No data sent to us</strong> (the developer)</li>
-                <li>⚠️ <strong>Free version</strong>: Uses Google AdMob (collects Advertising ID)</li>
-                <li>✅ <strong>Pro version</strong>: No ads, no tracking, no third parties</li>
-                <li>✅ Passwords <strong>encrypted using AES-256</strong></li>
-            </ul>
-        </div>
+        <div class="content">
+            <!-- Spanish Content -->
+            <div class="es-content">
+                <h1>Política de Privacidad</h1>
+                <p><strong>Última actualización</strong>: 25 de diciembre de 2024</p>
+                <p><strong>Fecha efectiva</strong>: 25 de diciembre de 2024</p>
 
-        <h2>1. Introduction</h2>
-        <p>MyLirc ("we", "our", or "the app") is an IRC (Internet Relay Chat) client for Android that allows users to
-            connect to IRC servers and participate in chat conversations. This Privacy Policy explains how MyLirc
-            collects, uses, stores, and protects your information.</p>
+                <h2>Información del Desarrollador</h2>
+                <ul>
+                    <li><strong>Nombre de la App</strong>: MyLirc IRC Client</li>
+                    <li><strong>Desarrollador</strong>: c4lm40s</li>
+                    <li><strong>Email de Contacto</strong>: c4lm40s@gmail.com</li>
+                    <li><strong>Sitio Web</strong>: <a
+                            href="https://mylirc.github.io/MyLirc/">https://mylirc.github.io/MyLirc/</a></li>
+                </ul>
 
-        <h2>2. Data Collection</h2>
-        <p>MyLirc collects and stores the following data <strong>locally on your device</strong>:</p>
+                <h2>1. Introducción</h2>
+                <p>MyLirc es un cliente IRC (Internet Relay Chat) para Android que permite a los usuarios conectarse a
+                    servidores IRC y participar en conversaciones de chat. Esta Política de Privacidad explica cómo
+                    MyLirc recopila, usa, almacena y protege tu información.</p>
 
-        <h3>2.1 IRC Server Connection Details</h3>
-        <ul>
-            <li>Server hostname and port</li>
-            <li>SSL/TLS connection settings</li>
-            <li>Server nickname and username</li>
-            <li>Channel names and preferences</li>
-        </ul>
+                <div class="highlight">
+                    <strong>Puntos Clave</strong>:
+                    <ul>
+                        <li>Todos los datos IRC se almacenan <strong>localmente en tu dispositivo</strong></li>
+                        <li><strong>No se envían datos</strong> al desarrollador</li>
+                        <li><strong>Versión Free</strong>: Usa Google AdMob para publicidad (recopila ID de publicidad)
+                        </li>
+                        <li><strong>Versión Pro</strong>: Sin anuncios, sin seguimiento, sin servicios de terceros</li>
+                        <li>Las contraseñas están <strong>encriptadas con AES-256</strong></li>
+                    </ul>
+                </div>
 
-        <h3>2.2 IRC Credentials (Encrypted)</h3>
-        <ul>
-            <li>IRC server passwords (encrypted using AES-256)</li>
-            <li>SASL authentication credentials (encrypted using AES-256)</li>
-            <li>NickServ authentication passwords (encrypted using AES-256)</li>
-        </ul>
+                <h2>2. Recopilación de Datos</h2>
+                <p>MyLirc recopila y almacena los siguientes datos <strong>localmente en tu dispositivo</strong>:</p>
 
-        <h3>2.3 Chat Logs (Optional)</h3>
-        <ul>
-            <li>IRC messages sent and received</li>
-            <li>Channel conversation history</li>
-            <li>Private message history</li>
-        </ul>
-        <p><strong>User Control:</strong> Logging is optional and can be disabled in Settings. Users can delete chat
-            logs at any time.</p>
+                <h3>2.1 Detalles de Conexión al Servidor IRC</h3>
+                <ul>
+                    <li>Nombre de host y puerto del servidor</li>
+                    <li>Configuración de conexión SSL/TLS</li>
+                    <li>Apodo y nombre de usuario del servidor</li>
+                    <li>Nombres de canales y preferencias</li>
+                </ul>
 
-        <h2>3. Data Usage</h2>
-        <p>All data collected by MyLirc is used <strong>solely for the following purposes</strong>:</p>
-        <ol>
-            <li><strong>Establishing IRC Connections:</strong> Server details and credentials are used to connect to IRC
-                servers you configure.</li>
-            <li><strong>Providing IRC Functionality:</strong> Messages, commands, and user lists are processed to
-                provide IRC client features.</li>
-            <li><strong>Storing User Preferences:</strong> Settings and preferences are saved to personalize your
-                experience.</li>
-            <li><strong>Chat History:</strong> If logging is enabled, messages are stored locally for your reference.
-            </li>
-        </ol>
+                <h3>2.2 Credenciales IRC (Encriptadas)</h3>
+                <ul>
+                    <li>Contraseñas del servidor IRC (encriptadas con AES-256)</li>
+                    <li>Credenciales de autenticación SASL (encriptadas con AES-256)</li>
+                    <li>Contraseñas de autenticación NickServ (encriptadas con AES-256)</li>
+                </ul>
+                <p><strong>Seguridad</strong>: Todas las contraseñas se encriptan usando SecureStorage de Android con
+                    encriptación AES-256.</p>
 
-        <div class="highlight">
-            <strong>We do NOT:</strong>
-            <ul>
-                <li>❌ Send your data to our servers</li>
-                <li>❌ Share your data with third parties</li>
-                <li>❌ Use your data for analytics or advertising</li>
-                <li>❌ Track your activity or behavior</li>
-            </ul>
-        </div>
+                <h3>2.3 Registros de Chat (Opcional)</h3>
+                <ul>
+                    <li>Mensajes IRC enviados y recibidos</li>
+                    <li>Historial de conversaciones de canales</li>
+                    <li>Historial de mensajes privados</li>
+                </ul>
+                <p><strong>Control del Usuario</strong>: El registro es <strong>opcional</strong> y puede deshabilitarse
+                    en Configuración.</p>
 
-        <h2>4. Data Storage and Security</h2>
+                <h2>3. Uso de Datos</h2>
+                <p>Todos los datos recopilados por MyLirc se usan <strong>únicamente</strong> para:</p>
+                <ul>
+                    <li>Establecer conexiones IRC</li>
+                    <li>Proporcionar funcionalidad de cliente IRC</li>
+                    <li>Almacenar preferencias del usuario</li>
+                    <li>Historial de chat (si está habilitado)</li>
+                </ul>
 
-        <h3>4.1 Local Storage</h3>
-        <p>All data is stored <strong>locally on your Android device</strong>. No cloud storage or remote servers are
-            used.</p>
+                <div class="highlight">
+                    <strong>NO hacemos</strong>:
+                    <ul>
+                        <li>❌ Enviar tus datos a nuestros servidores</li>
+                        <li>❌ Compartir tus datos con terceros</li>
+                        <li>❌ Usar tus datos para análisis o publicidad</li>
+                        <li>❌ Rastrear tu actividad o comportamiento</li>
+                    </ul>
+                </div>
 
-        <h3>4.2 Encryption</h3>
-        <ul>
-            <li><strong>Passwords:</strong> Encrypted using <strong>AES-256</strong> encryption via Android's KeyStore
-                system</li>
-            <li><strong>In Transit:</strong> IRC connections support <strong>SSL/TLS encryption</strong> when configured
-            </li>
-            <li><strong>At Rest:</strong> Passwords are encrypted on disk; other data is stored in app-private storage
-            </li>
-        </ul>
+                <h2>4. Compartir Datos</h2>
 
-        <h3>4.3 Network Security</h3>
-        <ul>
-            <li>The app enforces <strong>HTTPS-only</strong> connections for secure communication</li>
-            <li>Cleartext (HTTP) traffic is blocked by default</li>
-            <li>SSL/TLS certificate validation is enforced</li>
-        </ul>
+                <h3>Versión Free</h3>
+                <p><strong>Google AdMob</strong> (servicio de publicidad) recopila y comparte datos:</p>
+                <ul>
+                    <li>ID de publicidad (para anuncios personalizados)</li>
+                    <li>Información del dispositivo (modelo, versión de SO)</li>
+                    <li>Dirección IP (ubicación aproximada)</li>
+                    <li>Datos de uso de la app (para segmentación de anuncios)</li>
+                </ul>
+                <p><strong>Nosotros (el desarrollador) NO</strong> accedemos ni almacenamos tu ID de publicidad.</p>
 
-        <h2>5. Data Sharing</h2>
+                <h3>Versión Pro</h3>
+                <p><strong>MyLirc Pro NO comparte ningún dato de usuario con terceros.</strong></p>
 
-        <h3>Free Version</h3>
-        <p><strong>Google AdMob</strong> (advertising service) collects and shares data:</p>
-        <ul>
-            <li>✅ <strong>Advertising ID</strong>: Shared with ad networks for personalized ads</li>
-            <li>✅ <strong>Device Info</strong>: Model, OS version, screen size</li>
-            <li>✅ <strong>IP Address</strong>: For approximate location-based ads</li>
-            <li>✅ <strong>App Usage</strong>: For ad targeting and analytics</li>
-        </ul>
+                <h2>5. Servicios de Terceros</h2>
 
-        <p><strong>We (the developer) do NOT</strong>:</p>
-        <ul>
-            <li>❌ Access or store your Advertising ID</li>
-            <li>❌ Share your IRC data with anyone</li>
-            <li>❌ Sell your personal information</li>
-        </ul>
+                <h3>Versión Free</h3>
+                <p><strong>Google AdMob</strong>:</p>
+                <ul>
+                    <li><strong>Propósito</strong>: Mostrar anuncios para apoyar el desarrollo gratuito de la app</li>
+                    <li><strong>Política de Privacidad</strong>: <a href="https://policies.google.com/privacy"
+                            target="_blank">https://policies.google.com/privacy</a></li>
+                    <li><strong>Opt-out</strong>: Los usuarios pueden restablecer el ID de publicidad en Configuración
+                        de Android &gt; Google &gt; Anuncios</li>
+                </ul>
 
-        <h3>Pro Version</h3>
-        <p><strong>MyLirc Pro does NOT share any user data with third parties.</strong></p>
-        <p>The only external connections made by the app are to IRC servers you explicitly configure. No analytics, no
-            advertising, no tracking.</p>
+                <h3>Versión Pro</h3>
+                <p>La <strong>versión Pro NO usa</strong> ningún servicio de terceros para publicidad, análisis o
+                    seguimiento.</p>
 
-        <h2>6. Data Retention and Deletion</h2>
+                <h2>6. Seguridad de Datos</h2>
+                <ul>
+                    <li><strong>Encriptación AES-256</strong> para todas las contraseñas</li>
+                    <li><strong>Almacenamiento local seguro</strong> usando SecureStorage de Android</li>
+                    <li><strong>Soporte SSL/TLS</strong> para conexiones IRC</li>
+                    <li><strong>Sin transmisión de datos</strong> al desarrollador</li>
+                </ul>
 
-        <h3>6.1 Data Deletion</h3>
-        <p>You can delete your data in the following ways:</p>
-        <ul>
-            <li><strong>Delete Chat Logs:</strong> Settings > Logging > Clear Chat History</li>
-            <li><strong>Delete Server Configurations:</strong> Long-press a server > Delete</li>
-            <li><strong>Delete All App Data:</strong> Android Settings > Apps > MyLirc > Storage > Clear Data</li>
-            <li><strong>Complete Removal:</strong> Uninstalling the app will permanently delete all data</li>
-        </ul>
+                <h2>7. Tus Derechos</h2>
+                <p>Puedes:</p>
+                <ul>
+                    <li>✅ <strong>Ver todos tus datos</strong> en Configuración</li>
+                    <li>✅ <strong>Eliminar todos los datos</strong> desinstalando la app</li>
+                    <li>✅ <strong>Deshabilitar el registro</strong> en Configuración</li>
+                    <li>✅ <strong>Eliminar registros de chat</strong> en cualquier momento</li>
+                </ul>
 
-        <h2>7. Third-Party Services</h2>
+                <h2>8. Contacto</h2>
+                <p>¿Preguntas? Contáctanos en: <a href="mailto:c4lm40s@gmail.com">c4lm40s@gmail.com</a></p>
 
-        <h3>Free Version</h3>
-        <p>The <strong>Free version</strong> uses the following third-party service:</p>
+                <hr>
+                <p><strong>MyLirc IRC Client</strong><br>
+                    <strong>Versión</strong>: 1.0<br>
+                    <strong>Versión de Política de Privacidad</strong>: 1.0<br>
+                    <strong>Última Actualización</strong>: 25 de diciembre de 2024
+                </p>
+            </div>
 
-        <h4 style="color: #1976D2;">Google AdMob (Advertising)</h4>
-        <ul>
-            <li><strong>Purpose</strong>: Display advertisements to support free app development</li>
-            <li><strong>Data Collected by AdMob</strong>:
+            <!-- English Content -->
+            <div class="en-content">
+                <h1>Privacy Policy</h1>
+                <p><strong>Last Updated</strong>: December 25, 2024</p>
+                <p><strong>Effective Date</strong>: December 25, 2024</p>
+
+                <h2>Developer Information</h2>
+                <ul>
+                    <li><strong>App Name</strong>: MyLirc IRC Client</li>
+                    <li><strong>Developer</strong>: c4lm40s</li>
+                    <li><strong>Contact Email</strong>: c4lm40s@gmail.com</li>
+                    <li><strong>Website</strong>: <a
+                            href="https://mylirc.github.io/MyLirc/">https://mylirc.github.io/MyLirc/</a></li>
+                </ul>
+
+                <h2>1. Introduction</h2>
+                <p>MyLirc is an IRC (Internet Relay Chat) client for Android that allows users to connect to IRC servers
+                    and participate in chat conversations. This Privacy Policy explains how MyLirc collects, uses,
+                    stores, and protects your information.</p>
+
+                <div class="highlight">
+                    <strong>Key Points</strong>:
+                    <ul>
+                        <li>All IRC data is stored <strong>locally on your device</strong></li>
+                        <li><strong>No data is sent to us</strong> (the developer)</li>
+                        <li><strong>Free version</strong>: Uses Google AdMob for advertising (collects Advertising ID)
+                        </li>
+                        <li><strong>Pro version</strong>: No ads, no tracking, no third-party services</li>
+                        <li>Passwords are <strong>encrypted using AES-256</strong> encryption</li>
+                    </ul>
+                </div>
+
+                <h2>2. Data Collection</h2>
+                <p>MyLirc collects and stores the following data <strong>locally on your device</strong>:</p>
+
+                <h3>2.1 IRC Server Connection Details</h3>
+                <ul>
+                    <li>Server hostname and port</li>
+                    <li>SSL/TLS connection settings</li>
+                    <li>Server nickname and username</li>
+                    <li>Channel names and preferences</li>
+                </ul>
+
+                <h3>2.2 IRC Credentials (Encrypted)</h3>
+                <ul>
+                    <li>IRC server passwords (encrypted using AES-256)</li>
+                    <li>SASL authentication credentials (encrypted using AES-256)</li>
+                    <li>NickServ authentication passwords (encrypted using AES-256)</li>
+                </ul>
+                <p><strong>Security</strong>: All passwords are encrypted using Android's SecureStorage with AES-256
+                    encryption.</p>
+
+                <h3>2.3 Chat Logs (Optional)</h3>
+                <ul>
+                    <li>IRC messages sent and received</li>
+                    <li>Channel conversation history</li>
+                    <li>Private message history</li>
+                </ul>
+                <p><strong>User Control</strong>: Logging is <strong>optional</strong> and can be disabled in Settings.
+                </p>
+
+                <h2>3. Data Usage</h2>
+                <p>All data collected by MyLirc is used <strong>solely</strong> for:</p>
+                <ul>
+                    <li>Establishing IRC connections</li>
+                    <li>Providing IRC client functionality</li>
+                    <li>Storing user preferences</li>
+                    <li>Chat history (if enabled)</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>We do NOT</strong>:
+                    <ul>
+                        <li>❌ Send your data to our servers</li>
+                        <li>❌ Share your data with third parties</li>
+                        <li>❌ Use your data for analytics or advertising</li>
+                        <li>❌ Track your activity or behavior</li>
+                    </ul>
+                </div>
+
+                <h2>4. Data Sharing</h2>
+
+                <h3>Free Version</h3>
+                <p><strong>Google AdMob</strong> (advertising service) collects and shares data:</p>
                 <ul>
                     <li>Advertising ID (for personalized ads)</li>
                     <li>Device information (model, OS version)</li>
                     <li>IP address (approximate location)</li>
                     <li>App usage data (for ad targeting)</li>
                 </ul>
-            </li>
-            <li><strong>Privacy Policy</strong>: <a href="https://policies.google.com/privacy"
-                    target="_blank">https://policies.google.com/privacy</a></li>
-            <li><strong>Opt-out</strong>: Users can reset Advertising ID in Android Settings &gt; Google &gt; Ads</li>
-        </ul>
+                <p><strong>We (the developer) do NOT</strong> access or store your Advertising ID.</p>
 
-        <div class="highlight">
-            <strong>Important</strong>: AdMob may share data with advertising partners. We do not control this data
-            collection.
+                <h3>Pro Version</h3>
+                <p><strong>MyLirc Pro does NOT share any user data with third parties.</strong></p>
+
+                <h2>5. Third-Party Services</h2>
+
+                <h3>Free Version</h3>
+                <p><strong>Google AdMob</strong>:</p>
+                <ul>
+                    <li><strong>Purpose</strong>: Display advertisements to support free app development</li>
+                    <li><strong>Privacy Policy</strong>: <a href="https://policies.google.com/privacy"
+                            target="_blank">https://policies.google.com/privacy</a></li>
+                    <li><strong>Opt-out</strong>: Users can reset Advertising ID in Android Settings &gt; Google &gt;
+                        Ads</li>
+                </ul>
+
+                <h3>Pro Version</h3>
+                <p>The <strong>Pro version does NOT use</strong> any third-party services for advertising, analytics, or
+                    tracking.</p>
+
+                <h2>6. Data Security</h2>
+                <ul>
+                    <li><strong>AES-256 encryption</strong> for all passwords</li>
+                    <li><strong>Secure local storage</strong> using Android's SecureStorage</li>
+                    <li><strong>SSL/TLS support</strong> for IRC connections</li>
+                    <li><strong>No data transmission</strong> to the developer</li>
+                </ul>
+
+                <h2>7. Your Rights</h2>
+                <p>You can:</p>
+                <ul>
+                    <li>✅ <strong>View all your data</strong> in Settings</li>
+                    <li>✅ <strong>Delete all data</strong> by uninstalling the app</li>
+                    <li>✅ <strong>Disable logging</strong> in Settings</li>
+                    <li>✅ <strong>Delete chat logs</strong> at any time</li>
+                </ul>
+
+                <h2>8. Contact</h2>
+                <p>Questions? Contact us at: <a href="mailto:c4lm40s@gmail.com">c4lm40s@gmail.com</a></p>
+
+                <hr>
+                <p><strong>MyLirc IRC Client</strong><br>
+                    <strong>Version</strong>: 1.0<br>
+                    <strong>Privacy Policy Version</strong>: 1.0<br>
+                    <strong>Last Updated</strong>: December 25, 2024
+                </p>
+            </div>
         </div>
-
-        <h3>Pro Version</h3>
-        <p>The <strong>Pro version does NOT use</strong> any third-party services for:</p>
-        <ul>
-            <li>✅ <strong>No advertising</strong> (no AdMob)</li>
-            <li>✅ <strong>No analytics</strong> (no Google Analytics, Firebase)</li>
-            <li>✅ <strong>No tracking</strong> (no data collection)</li>
-            <li>✅ <strong>No cloud storage</strong> (no Google Drive, Dropbox)</li>
-        </ul>
-
-        <h3>Development Libraries (Both Versions)</h3>
-        <p>Both versions use these <strong>standard development libraries</strong> that do not collect user data:</p>
-        <ul>
-            <li>AndroidX libraries (Google's official Android libraries)</li>
-            <li>Hilt/Dagger (dependency injection framework)</li>
-            <li>Material Components (Google's UI library)</li>
-            <li>Kotlin Coroutines (concurrency framework)</li>
-        </ul>
-
-        <h2>8. Permissions Explained</h2>
-        <table>
-            <tr>
-                <th>Permission</th>
-                <th>Purpose</th>
-                <th>Required?</th>
-            </tr>
-            <tr>
-                <td>INTERNET</td>
-                <td>Connect to IRC servers</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>ACCESS_NETWORK_STATE</td>
-                <td>Check network availability</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>FOREGROUND_SERVICE</td>
-                <td>Maintain persistent IRC connection</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>POST_NOTIFICATIONS</td>
-                <td>Show notifications for messages</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>VIBRATE</td>
-                <td>Vibrate for notification alerts</td>
-                <td>Optional</td>
-            </tr>
-            <tr>
-                <td>WAKE_LOCK</td>
-                <td>Keep device awake for background connections</td>
-                <td>Yes</td>
-            </tr>
-        </table>
-
-        <h2>9. Your Rights</h2>
-        <p>You have the following rights regarding your data:</p>
-        <ul>
-            <li><strong>Access:</strong> You can view all your data within the app</li>
-            <li><strong>Deletion:</strong> You can delete your data at any time</li>
-            <li><strong>Control:</strong> You have full control over what data is stored (e.g., disable logging)</li>
-        </ul>
-
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be posted at this URL with an updated "Last
-            Updated" date.</p>
-
-        <h2>11. Contact Us</h2>
-        <p>If you have any questions or concerns regarding this Privacy Policy, please contact us.</p>
-
-        <h2>Summary</h2>
-
-        <h3>MyLirc Free</h3>
-        <div class="highlight">
-            <ul>
-                <li>✅ All IRC data stays on <strong>your device</strong></li>
-                <li>✅ Passwords are <strong>encrypted</strong> with AES-256</li>
-                <li>⚠️ <strong>Uses AdMob</strong> for advertising (collects Advertising ID)</li>
-                <li>✅ You can <strong>delete everything</strong> anytime</li>
-                <li>✅ We only connect to <strong>IRC servers you choose</strong></li>
-            </ul>
-        </div>
-
-        <h3>MyLirc Pro</h3>
-        <div class="highlight">
-            <ul>
-                <li>✅ All IRC data stays on <strong>your device</strong></li>
-                <li>✅ Passwords are <strong>encrypted</strong> with AES-256</li>
-                <li>✅ <strong>No ads, no tracking, no analytics</strong></li>
-                <li>✅ <strong>No data sharing</strong> with anyone</li>
-                <li>✅ You can <strong>delete everything</strong> anytime</li>
-                <li>✅ We only connect to <strong>IRC servers you choose</strong></li>
-            </ul>
-        </div>
-
-        <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+
+    <footer>
+        <p><a href="index.html" id="homeLink">Inicio</a> | <a href="mailto:c4lm40s@gmail.com"
+                id="contactLink">Contacto</a></p>
+        <p>&copy; 2024 MyLirc. <span id="rightsText">Todos los derechos reservados</span>.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLanguage', lang);
+            updateContent(lang);
+            updateLanguageSelector(lang);
+        }
+
+        function updateContent(lang) {
+            const esContent = document.querySelector('.es-content');
+            const enContent = document.querySelector('.en-content');
+            const backLink = document.getElementById('backLink');
+            const homeLink = document.getElementById('homeLink');
+            const contactLink = document.getElementById('contactLink');
+            const rightsText = document.getElementById('rightsText');
+
+            if (lang === 'es') {
+                esContent.style.display = 'block';
+                enContent.style.display = 'none';
+                backLink.textContent = '← Volver al inicio';
+                homeLink.textContent = 'Inicio';
+                contactLink.textContent = 'Contacto';
+                rightsText.textContent = 'Todos los derechos reservados';
+            } else {
+                esContent.style.display = 'none';
+                enContent.style.display = 'block';
+                backLink.textContent = '← Back to home';
+                homeLink.textContent = 'Home';
+                contactLink.textContent = 'Contact';
+                rightsText.textContent = 'All rights reserved';
+            }
+        }
+
+        function updateLanguageSelector(lang) {
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'es';
+            setLanguage(savedLang);
+        });
+    </script>
 </body>
 
 </html>
