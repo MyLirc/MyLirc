@@ -241,21 +241,46 @@
                 <p class="price" data-i18n="free">Free</p>
 
                 <ul class="features-list">
+                    <!-- Core IRC -->
                     <li><span class="check">✓</span> <span data-i18n="features.basicIRC">Basic IRC connections</span>
                     </li>
                     <li><span class="check">✓</span> <span data-i18n="features.ssl">SSL/TLS encryption</span></li>
-                    <li><span class="check">✓</span> <span data-i18n="features.notifications">Notifications</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.autoReconnect">Automatic
+                            reconnection</span></li>
+
+                    <!-- Appearance -->
                     <li><span class="check">✓</span> <span data-i18n="features.materialDesign">Material Design
                             interface</span></li>
                     <li><span class="check">✓</span> <span data-i18n="features.darkMode">Dark mode</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.fontCustomization">Font
+                            customization</span></li>
+
+                    <!-- Notifications -->
+                    <li><span class="check">✓</span> <span data-i18n="features.notifications">Smart notifications</span>
+                    </li>
+                    <li><span class="check">✓</span> <span data-i18n="features.mentionAlerts">Mention alerts</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.customSounds">Custom sounds</span></li>
+
+                    <!-- Advanced Features -->
+                    <li><span class="check">✓</span> <span data-i18n="features.notifyList">Notification list
+                            (Notify)</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.widgets">Home screen widgets</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.aliases">Custom command aliases</span>
+                    </li>
+                    <li><span class="check">✓</span> <span data-i18n="features.startupSequences">Automatic startup
+                            sequences</span></li>
+
+                    <!-- Language -->
                     <li><span class="check">✓</span> <span data-i18n="features.multiLanguage">Multi-language
                             (EN/ES)</span></li>
+
+                    <!-- Pro Only (crossed out) -->
                     <li><span class="cross">✗</span> <span data-i18n="features.multipleServers">Multiple simultaneous
                             servers</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.unlimitedLogs">Unlimited chat
                             logging</span></li>
-                    <li><span class="cross">✗</span> <span data-i18n="features.advancedSearch">Advanced search</span>
-                    </li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.advancedSearch">Advanced history
+                            search</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.customThemes">Custom themes</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.noAds">No ads</span></li>
                 </ul>
@@ -271,12 +296,16 @@
                 <ul class="features-list">
                     <li><span class="check">✓</span> <strong data-i18n="features.allFree">All Free features +</strong>
                     </li>
+
+                    <!-- Pro Exclusive -->
                     <li><span class="check">✓</span> <strong data-i18n="features.multipleServers">Multiple simultaneous
                             servers</strong></li>
                     <li><span class="check">✓</span> <strong data-i18n="features.unlimitedLogs">Unlimited chat
                             logging</strong></li>
-                    <li><span class="check">✓</span> <strong data-i18n="features.advancedSearch">Advanced
+                    <li><span class="check">✓</span> <strong data-i18n="features.advancedSearch">Advanced history
                             search</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.exportLogs">Export
+                            conversations</strong></li>
                     <li><span class="check">✓</span> <strong data-i18n="features.customThemes">Custom themes</strong>
                     </li>
                     <li><span class="check">✓</span> <strong data-i18n="features.noAds">No ads</strong></li>
@@ -284,10 +313,8 @@
                             support</strong></li>
                     <li><span class="check">✓</span> <strong data-i18n="features.earlyUpdates">Early updates</strong>
                     </li>
-                    <li><span class="check">✓</span> <strong data-i18n="features.exportImport">Export/Import
+                    <li><span class="check">✓</span> <strong data-i18n="features.exportImport">Export/Import complete
                             configuration</strong></li>
-                    <li><span class="check">✓</span> <strong data-i18n="features.customCommands">Custom
-                            commands</strong></li>
                 </ul>
 
                 <a href="#" class="download-btn pro" data-i18n="downloadPro">Download Pro (Coming Soon)</a>
@@ -329,6 +356,40 @@
                 <h3 style="color: #1976D2;">🔐 <span data-i18n="privacy">Privacy</span></h3>
                 <p data-i18n="privacyDesc">No tracking, no analytics, no data sharing. Everything stays on your device.
                 </p>
+            </div>
+
+            <div class="version-card">
+                <h3 style="color: #1976D2;">🎨 <span data-i18n="appearance">Customizable Appearance</span></h3>
+                <p data-i18n="appearanceDesc">Customize fonts, colors, and themes. Dark mode included for visual
+                    comfort.</p>
+            </div>
+
+            <div class="version-card">
+                <h3 style="color: #1976D2;">🔌 <span data-i18n="connections">Connection Management</span></h3>
+                <p data-i18n="connectionsDesc">Automatic reconnection, multiple servers (Pro), and advanced IRC
+                    connection management.</p>
+            </div>
+
+            <div class="version-card">
+                <h3 style="color: #1976D2;">📝 <span data-i18n="history">Chat History</span></h3>
+                <p data-i18n="historyDesc">Optional conversation logging with advanced search (Pro) and log export.</p>
+            </div>
+
+            <div class="version-card">
+                <h3 style="color: #1976D2;">👥 <span data-i18n="notifyList">Notification List</span></h3>
+                <p data-i18n="notifyListDesc">Monitor specific users and receive alerts when they connect or disconnect.
+                </p>
+            </div>
+
+            <div class="version-card">
+                <h3 style="color: #1976D2;">📲 <span data-i18n="widgets">Widgets</span></h3>
+                <p data-i18n="widgetsDesc">Quick access from home screen with customizable widgets.</p>
+            </div>
+
+            <div class="version-card">
+                <h3 style="color: #1976D2;">⚙️ <span data-i18n="aliases">Command Aliases</span></h3>
+                <p data-i18n="aliasesDesc">Create custom shortcuts for frequent IRC commands and automatic startup
+                    sequences.</p>
             </div>
         </div>
     </div>
