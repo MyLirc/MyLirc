@@ -33,7 +33,7 @@ const translations = {
             basicSounds: "Notificaciones básicas de sonido",
 
             // Chat & History
-            unlimitedLogs: "Registro de chat ilimitado",
+            unlimitedLogs: "Registro de chat",
             advancedSearch: "Búsqueda avanzada en historial",
             exportLogs: "Exportar conversaciones",
 
@@ -144,7 +144,7 @@ const translations = {
             basicSounds: "Basic sound notifications",
 
             // Chat & History
-            unlimitedLogs: "Unlimited chat logging",
+            unlimitedLogs: "Chat logging",
             advancedSearch: "Advanced history search",
             exportLogs: "Export conversations",
 
