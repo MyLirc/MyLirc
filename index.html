@@ -243,6 +243,7 @@
                 <p class="price" data-i18n="pro">One-time payment</p>
 
                 <ul class="features-list">
+                    <!-- SHARED FEATURES (available in both Free and Pro) -->
                     <!-- Core IRC -->
                     <li><span class="check">✓</span> <span data-i18n="features.basicIRC">Basic IRC connections</span>
                     </li>
@@ -264,22 +265,25 @@
                     <li><span class="check">✓</span> <span data-i18n="features.basicSounds">Basic notification
                             sounds</span></li>
 
-                    <!-- Advanced Features -->
-                    <li><span class="check">✓</span> <span data-i18n="features.notifyList">Notification list
-                            (Notify)</span></li>
-                    <li><span class="check">✓</span> <span data-i18n="features.widgets">Home screen widgets</span></li>
-                    <li><span class="check">✓</span> <span data-i18n="features.aliases">Custom command aliases</span>
-                    </li>
-                    <li><span class="check">✓</span> <span data-i18n="features.startupSequences">Automatic startup
-                            sequences</span></li>
-                    <li><span class="check">✓</span> <strong data-i18n="features.customScripts">Custom scripts
-                            (automation)</strong></li>
-
                     <!-- Language -->
                     <li><span class="check">✓</span> <span data-i18n="features.multiLanguage">Multi-language
                             (EN/ES)</span></li>
 
-                    <!-- Pro Exclusive -->
+                    <!-- PRO EXCLUSIVE FEATURES (not available in Free) -->
+                    <li><span class="check">✓</span> <strong data-i18n="features.darkMode">Dark mode</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.customSounds">Custom sounds</strong>
+                    </li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.notifyList">Notification list
+                            (Notify)</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.widgets">Home screen widgets</strong>
+                    </li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.aliases">Custom command
+                            aliases</strong>
+                    </li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.startupSequences">Automatic startup
+                            sequences</strong></li>
+                    <li><span class="check">✓</span> <strong data-i18n="features.customScripts">Custom scripts</strong>
+                    </li>
                     <li><span class="check">✓</span> <strong data-i18n="features.multipleServers">Multiple simultaneous
                             servers</strong></li>
                     <li><span class="check">✓</span> <strong data-i18n="features.unlimitedLogs">Unlimited chat
@@ -291,7 +295,6 @@
                     <li><span class="check">✓</span> <strong data-i18n="features.customThemes">Custom themes</strong>
                     </li>
                     <li><span class="check">✓</span> <strong data-i18n="features.noAds">No ads</strong></li>
-
                     <li><span class="check">✓</span> <strong data-i18n="features.earlyUpdates">Early updates</strong>
                     </li>
                     <li><span class="check">✓</span> <strong data-i18n="features.exportImport">Export/Import complete
@@ -307,6 +310,7 @@
                 <p class="price" data-i18n="free">Free</p>
 
                 <ul class="features-list">
+                    <!-- SHARED FEATURES (available in both Free and Pro) -->
                     <!-- Core IRC -->
                     <li><span class="check">✓</span> <span data-i18n="features.basicIRC">Basic IRC connections</span>
                     </li>
@@ -317,7 +321,7 @@
                     <!-- Appearance -->
                     <li><span class="check">✓</span> <span data-i18n="features.materialDesign">Material Design
                             interface</span></li>
-                    <li><span class="cross">✗</span> <span data-i18n="features.darkMode">Dark mode</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.lightMode">Light mode only</span></li>
                     <li><span class="check">✓</span> <span data-i18n="features.fontCustomization">Font
                             customization</span></li>
 
@@ -325,9 +329,16 @@
                     <li><span class="check">✓</span> <span data-i18n="features.notifications">Smart notifications</span>
                     </li>
                     <li><span class="check">✓</span> <span data-i18n="features.mentionAlerts">Mention alerts</span></li>
-                    <li><span class="cross">✗</span> <span data-i18n="features.customSounds">Custom sounds</span></li>
+                    <li><span class="check">✓</span> <span data-i18n="features.basicSounds">Basic notification
+                            sounds</span></li>
 
-                    <!-- Advanced Features (Pro Only) -->
+                    <!-- Language -->
+                    <li><span class="check">✓</span> <span data-i18n="features.multiLanguage">Multi-language
+                            (EN/ES)</span></li>
+
+                    <!-- PRO EXCLUSIVE FEATURES (not available in Free) -->
+                    <li><span class="cross">✗</span> <span data-i18n="features.darkMode">Dark mode</span></li>
+                    <li><span class="cross">✗</span> <span data-i18n="features.customSounds">Custom sounds</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.notifyList">Notification list
                             (Notify)</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.widgets">Home screen widgets</span></li>
@@ -335,14 +346,7 @@
                     </li>
                     <li><span class="cross">✗</span> <span data-i18n="features.startupSequences">Automatic startup
                             sequences</span></li>
-                    <li><span class="cross">✗</span> <span data-i18n="features.customScripts">Custom scripts
-                            (automation)</span></li>
-
-                    <!-- Language -->
-                    <li><span class="check">✓</span> <span data-i18n="features.multiLanguage">Multi-language
-                            (EN/ES)</span></li>
-
-                    <!-- Pro Only (crossed out in RED) -->
+                    <li><span class="cross">✗</span> <span data-i18n="features.customScripts">Custom scripts</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.multipleServers">Multiple simultaneous
                             servers</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.unlimitedLogs">Unlimited chat
@@ -353,9 +357,6 @@
                     </li>
                     <li><span class="cross">✗</span> <span data-i18n="features.customThemes">Custom themes</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.noAds">No ads</span></li>
-
-                    <li><span class="cross">✗</span> <span data-i18n="features.customScripts">Custom scripts
-                            (automation)</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.earlyUpdates">Early updates</span></li>
                     <li><span class="cross">✗</span> <span data-i18n="features.exportImport">Export/Import complete
                             configuration</span></li>
