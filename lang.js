@@ -21,6 +21,7 @@ const translations = {
             // Appearance
             materialDesign: "Interfaz Material Design",
             darkMode: "Modo oscuro",
+            lightMode: "Solo modo claro",
             customThemes: "Temas personalizados",
             fontCustomization: "Personalización de fuentes",
 
@@ -29,6 +30,7 @@ const translations = {
             mentionAlerts: "Alertas de menciones",
             privateMessageAlerts: "Alertas de mensajes privados",
             customSounds: "Sonidos personalizados",
+            basicSounds: "Sonidos de notificación básicos",
 
             // Chat & History
             unlimitedLogs: "Registro de chat ilimitado",
@@ -40,6 +42,7 @@ const translations = {
             widgets: "Widgets de pantalla principal",
             aliases: "Comandos alias personalizados",
             startupSequences: "Secuencias de inicio automáticas",
+            customScripts: "Scripts personalizados (automatización)",
 
             // Privacy & Security
             passwordEncryption: "Cifrado AES-256 de contraseñas",
@@ -129,6 +132,7 @@ const translations = {
             // Appearance
             materialDesign: "Material Design interface",
             darkMode: "Dark mode",
+            lightMode: "Light mode only",
             customThemes: "Custom themes",
             fontCustomization: "Font customization",
 
@@ -137,6 +141,7 @@ const translations = {
             mentionAlerts: "Mention alerts",
             privateMessageAlerts: "Private message alerts",
             customSounds: "Custom sounds",
+            basicSounds: "Basic notification sounds",
 
             // Chat & History
             unlimitedLogs: "Unlimited chat logging",
@@ -148,6 +153,7 @@ const translations = {
             widgets: "Home screen widgets",
             aliases: "Custom command aliases",
             startupSequences: "Automatic startup sequences",
+            customScripts: "Custom scripts (automation)",
 
             // Privacy & Security
             passwordEncryption: "AES-256 password encryption",
