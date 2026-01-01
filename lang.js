@@ -105,6 +105,9 @@ const translations = {
         aliases: "Comandos Alias",
         aliasesDesc: "Crea atajos personalizados para comandos IRC frecuentes y secuencias de inicio automáticas.",
 
+        scripting: "Scripting Avanzado",
+        scriptingDesc: "Automatiza tu cliente con un potente motor de scripts. Reacciona a eventos, mensajes y comandos.",
+
         // Footer
         privacyPolicy: "Política de Privacidad",
         contact: "Contacto",
@@ -215,6 +218,9 @@ const translations = {
 
         aliases: "Command Aliases",
         aliasesDesc: "Create custom shortcuts for frequent IRC commands and automatic startup sequences.",
+
+        scripting: "Advanced Scripting",
+        scriptingDesc: "Automate your client with a powerful scripting engine. React to events, messages, and commands.",
 
         // Footer
         privacyPolicy: "Privacy Policy",
