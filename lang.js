@@ -17,6 +17,13 @@ const translations = {
             ssl: "Cifrado SSL/TLS",
             multipleServers: "Múltiples servidores simultáneos",
             autoReconnect: "Reconexión automática",
+            cloneDetection: "Detección de Clones Proactiva en canales",
+            nickTracker: "Rastreador de cambios de nick",
+            saslAuth: "Autenticación SASL segura",
+            privacyControls: "Restricciones de Privacidad (Anti-Privados)",
+            channelModeration: "Moderación de canales a un solo click",
+            keywordHighlights: "Alertas por palabras clave (Highlights)",
+            fileSharing: "Compartir archivos integrado (0x0.st, file.io)",
 
             // Appearance
             materialDesign: "Interfaz Material Design",
@@ -27,6 +34,7 @@ const translations = {
 
             // Notifications
             notifications: "Notificaciones inteligentes",
+            youtubePreviews: "Miniaturas YouTube/Shorts (enlace y compartir)",
             mentionAlerts: "Alertas de menciones",
             privateMessageAlerts: "Alertas de mensajes privados",
             customSounds: "Sonidos personalizados",
@@ -57,16 +65,6 @@ const translations = {
             prioritySupport: "Soporte prioritario",
             earlyUpdates: "Actualizaciones anticipadas",
             exportImport: "Exportar/Importar configuración completa",
-
-            // Moderation & Privacy
-            cloneDetection: "Detección de clones avanzada",
-            nickTracker: "Rastreador de cambios de nick",
-            saslAuth: "Autenticación SASL segura",
-            privacyControls: "Restricciones de Privacidad (Anti-Privados)",
-            channelModeration: "Moderación de canales a un solo click",
-            keywordHighlights: "Alertas por palabras clave (Highlights)",
-            fileSharing: "Compartir archivos integrado (0x0.st, file.io)",
-            youtubePreviews: "Miniaturas de YouTube y Shorts",
 
             allFree: "Todo de Free +"
         },
@@ -100,6 +98,7 @@ const translations = {
         appearance: "Apariencia Personalizable",
         appearanceDesc: "Personaliza fuentes, colores y temas. Modo oscuro incluido para comodidad visual.",
 
+        cloneDetection: "Detección de Clones Proactiva",
         connections: "Gestión de Conexiones",
         connectionsDesc: "Reconexión automática, múltiples servidores (Pro), y gestión avanzada de conexiones IRC.",
 
@@ -114,6 +113,17 @@ const translations = {
 
         aliases: "Comandos Alias",
         aliasesDesc: "Crea atajos personalizados para comandos IRC frecuentes y secuencias de inicio automáticas.",
+
+        advModeration: "Detección de Clones y Nicks",
+        advModerationDesc: "Detección proactiva de Clones en el canal y rastreador de cambios de nick para identificar usuarios al instante.",
+        oneClickMod: "Moderación un Click",
+        oneClickModDesc: "Gestiona expulsiones, baneos y modos con botones de acceso rápido integrados en la interfaz.",
+        privacySecurity: "Privacidad Total",
+        privacySecurityDesc: "Controla quién puede hablarte con el sistema anti-privados y autenticación SASL segura.",
+        mediaPreviews: "Miniaturas de YouTube y Shorts",
+        mediaPreviewsDesc: "Previsualiza vídeos de YouTube, Shorts e imágenes con miniaturas automáticas. Soporta copiar enlaces y el botón 'Compartir' de la app YouTube.",
+        easySharing: "Compartir Archivos",
+        easySharingDesc: "Sube imágenes y documentos a servicios seguros con un solo toque y comparte el enlace al instante.",
 
         scripting: "Scripting Avanzado",
         scriptingDesc: "Automatiza tu cliente con un potente motor de scripts. Reacciona a eventos, mensajes y comandos.",
@@ -140,7 +150,14 @@ const translations = {
             basicIRC: "Basic IRC connections",
             ssl: "SSL/TLS encryption",
             multipleServers: "Multiple simultaneous servers",
+            cloneDetection: "Proactive Clone Detection in channels",
             autoReconnect: "Automatic reconnection",
+            nickTracker: "Nickname change tracker",
+            saslAuth: "Secure SASL authentication",
+            privacyControls: "Privacy Restrictions (Anti-PM)",
+            channelModeration: "One-click channel moderation",
+            keywordHighlights: "Keyword alerts (Highlights)",
+            fileSharing: "Integrated file sharing (0x0.st, file.io)",
 
             // Appearance
             materialDesign: "Material Design interface",
@@ -151,6 +168,7 @@ const translations = {
 
             // Notifications
             notifications: "Smart notifications",
+            youtubePreviews: "YouTube/Shorts Thumbnails (link & share)",
             mentionAlerts: "Mention alerts",
             privateMessageAlerts: "Private message alerts",
             customSounds: "Custom sounds",
@@ -167,6 +185,10 @@ const translations = {
             aliases: "Custom command aliases",
             startupSequences: "Automatic startup sequences",
             customScripts: "Custom scripts",
+            oneClickMod: "One-Click Moderation",
+            privacySecurity: "Total Privacy",
+            mediaPreviews: "YouTube & Shorts Thumbnails",
+            easySharing: "Easy File Sharing",
 
             // Privacy & Security
             passwordEncryption: "AES-256 password encryption",
@@ -181,16 +203,6 @@ const translations = {
             prioritySupport: "Priority support",
             earlyUpdates: "Early updates",
             exportImport: "Export/Import complete configuration",
-
-            // Moderation & Privacy
-            cloneDetection: "Advanced clone detection",
-            nickTracker: "Nickname change tracker",
-            saslAuth: "Secure SASL authentication",
-            privacyControls: "Privacy Restrictions (Anti-PM)",
-            channelModeration: "One-click channel moderation",
-            keywordHighlights: "Keyword alerts (Highlights)",
-            fileSharing: "Integrated file sharing (0x0.st, file.io)",
-            youtubePreviews: "YouTube & Shorts thumbnails",
 
             allFree: "All Free features +"
         },
@@ -238,6 +250,17 @@ const translations = {
 
         aliases: "Command Aliases",
         aliasesDesc: "Create custom shortcuts for frequent IRC commands and automatic startup sequences.",
+
+        advModeration: "Clone & Nick Detection",
+        advModerationDesc: "Proactive Clone detection in channels and nick change tracker to identify users instantly.",
+        oneClickMod: "One-Click Moderation",
+        oneClickModDesc: "Manage kicks, bans, and modes with quick access buttons integrated into the UI.",
+        privacySecurity: "Total Privacy",
+        privacySecurityDesc: "Control who can message you with the anti-PM system and secure SASL authentication.",
+        mediaPreviews: "YouTube & Shorts Thumbnails",
+        mediaPreviewsDesc: "Preview YouTube videos, Shorts, and images with automatic thumbnails. Supports link pasting and 'Share' from the YouTube app.",
+        easySharing: "Easy File Sharing",
+        easySharingDesc: "Upload images and documents to secure services with one tap and share the link instantly.",
 
         scripting: "Advanced Scripting",
         scriptingDesc: "Automate your client with a powerful scripting engine. React to events, messages, and commands.",

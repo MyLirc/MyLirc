@@ -36,11 +36,23 @@ MyLirc is a modern IRC (Internet Relay Chat) client designed specifically for An
 
 ### 🔔 **Smart Notifications**
 - Mention and private message alerts
-- Custom keyword highlighting
+- **Custom keyword highlighting** (Highlights)
 - Notification list (Notify) for user monitoring
 - Customizable sounds and vibration
 
-### ⚡ **Advanced Features**
+### 🛡️ **Advanced Moderation & Privacy**
+- **Proactive Clone Detection**: Scans the entire channel for potential clones.
+- **Nick Change Tracker**: Identifies users even when they change their nickname.
+- **One-click Moderation**: Manage kicks, bans, and modes with quick access buttons.
+- **Privacy Restrictions (Anti-PM)**: Control who can send you private messages.
+- **SASL Authentication**: Secure authentication for modern IRC networks.
+
+### 🌐 **Multimedia & Sharing**
+- **YouTube & Shorts Previews**: Automatic thumbnails for videos and shorts.
+- **Direct Sharing**: Support for "Share" intent from the official YouTube app.
+- **Integrated File Sharing**: Upload and share images/files via 0x0.st or file.io with one tap.
+
+### ⚡ **Other Features**
 - **Multiple servers** support (Pro)
 - **Automatic reconnection** with configurable delays
 - **Chat history** with advanced search (Pro)
@@ -58,6 +70,8 @@ Perfect for casual IRC users with all essential features included.
 ### MyLirc **Pro**
 Unlock the full potential with:
 - ✅ Multiple simultaneous server connections
+- ✅ **Nick Change Tracker** & Privacy Restrictions
+- ✅ **One-click Moderation** & Keyword Highlights
 - ✅ Unlimited chat logging and advanced search
 - ✅ Custom themes and appearance options
 - ✅ Export/Import complete configuration
