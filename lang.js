@@ -58,6 +58,16 @@ const translations = {
             earlyUpdates: "Actualizaciones anticipadas",
             exportImport: "Exportar/Importar configuración completa",
 
+            // Moderation & Privacy
+            cloneDetection: "Detección de clones avanzada",
+            nickTracker: "Rastreador de cambios de nick",
+            saslAuth: "Autenticación SASL segura",
+            privacyControls: "Restricciones de Privacidad (Anti-Privados)",
+            channelModeration: "Moderación de canales a un solo click",
+            keywordHighlights: "Alertas por palabras clave (Highlights)",
+            fileSharing: "Compartir archivos integrado (0x0.st, file.io)",
+            youtubePreviews: "Miniaturas de YouTube y Shorts",
+
             allFree: "Todo de Free +"
         },
 
@@ -171,6 +181,16 @@ const translations = {
             prioritySupport: "Priority support",
             earlyUpdates: "Early updates",
             exportImport: "Export/Import complete configuration",
+
+            // Moderation & Privacy
+            cloneDetection: "Advanced clone detection",
+            nickTracker: "Nickname change tracker",
+            saslAuth: "Secure SASL authentication",
+            privacyControls: "Privacy Restrictions (Anti-PM)",
+            channelModeration: "One-click channel moderation",
+            keywordHighlights: "Keyword alerts (Highlights)",
+            fileSharing: "Integrated file sharing (0x0.st, file.io)",
+            youtubePreviews: "YouTube & Shorts thumbnails",
 
             allFree: "All Free features +"
         },
