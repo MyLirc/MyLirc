@@ -8,6 +8,7 @@ const translations = {
         chooseVersion: "Elige Tu Versión",
         free: "Gratis",
         pro: "Pago único",
+        advancedTools: "Herramientas Avanzadas",
         recommended: "RECOMENDADO",
 
         // Features
@@ -142,6 +143,7 @@ const translations = {
         chooseVersion: "Choose Your Version",
         free: "Free",
         pro: "One-time payment",
+        advancedTools: "Advanced Tools & Features",
         recommended: "RECOMMENDED",
 
         // Features
